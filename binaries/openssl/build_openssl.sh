@@ -7,3 +7,5 @@ docker build -t keithrozario/openssl .
 CONTAINER=$(docker run -d keithrozario/openssl:latest false)
 docker cp $CONTAINER:/tmp/layer/openssl.zip openssl.zip
 docker rm $CONTAINER
+
+# openssl dgst -sha256 openssl.zip
