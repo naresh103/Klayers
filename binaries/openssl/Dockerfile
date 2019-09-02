@@ -2,7 +2,7 @@ FROM layerbuilder:latest
 
 LABEL maintainer="keith@keithrozario.com"
 
-ENV version 1.1.1c
+ARG version
 
 RUN wget https://www.openssl.org/source/openssl-$version.tar.gz && \
     tar -zxvf openssl-$version.tar.gz && \
