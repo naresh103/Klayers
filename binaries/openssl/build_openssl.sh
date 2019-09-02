@@ -31,4 +31,4 @@ aws s3api put-object-tagging --bucket $BUCKET_NAME --key $ARTIFACT \
  aws s3api get-object-tagging --bucket $BUCKET_NAME --key $ARTIFACT --profile KlayersAccount --region $AWS_REGION
 
 # Invoke deploy_binary lambda with package=openssl and package_artifact=openssl.zip
-# sls invoke --stage <stage> 
+# sls invoke -f deploy_binary --stage Klayers-dev --data "{\"package\":\"openssl\", \"zip_file\":\"openssl.zip\"}"
